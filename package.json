@@ -1,7 +1,6 @@
 {
   "name": "proffy",
   "scripts": {
-    "start": "node src/server",
     "dev": "nodemon src/server.js"
   },
   "dependencies": {
