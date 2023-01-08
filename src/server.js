@@ -3,6 +3,8 @@ const express = require('express')
 const server = express()
 const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('./pages')
 const nunjucks = require('nunjucks')
+const port = process.env.PORT || 3000;
+
 
 /* CONFIGURAR NUNJUCKS */
 nunjucks.configure('src/views', {
@@ -19,4 +21,4 @@ server
     .get("/study", pageStudy)
     .get("/give-classes", pageGiveClasses)
     .post("/save-classes", saveClasses)
-    .listen(5500);
+    app.listen(port, () => console.log(`HelloNode app listening on port ${port}!`))
