@@ -1,22 +1,25 @@
 
-const express = require('express')
-const server = express()
-const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('./pages')
-const nunjucks = require('nunjucks')
+const express = require ('express')
+const nunjucks = require ('nunjucks')
+const routes = require('./routes')
+const methodOverride = require('method-override')
 
-/* CONFIGURAR NUNJUCKS */
-nunjucks.configure('src/views', {
-    express: server,
-    noCache: true,
+const server = express()
+
+server.use(express.urlencoded({extended:true}))
+server.use(express.static('public'))
+server.use(methodOverride('_method'))
+server.use(routes)
+
+
+server. set('view engine','njk')
+
+nunjucks.configure('src/app/views',{
+    express:server,
+    autoescape:false,
+    noCache:true
 })
-server
-    /* RECEBER DADOS DO REQ.BODY */
-    .use(express.urlencoded({ extended: true }))
-    /* CONFIGURAR ARQUIVOS ESTÁTICOS (CSS,SCRIPTS,IMAGENS) */
-    .use(express.static("public"))
-    /* ROTAS DA APLICAÇÃO */
-    .get("/", pageLanding)
-    .get("/study", pageStudy)
-    .get("/give-classes", pageGiveClasses)
-    .post("/save-classes", saveClasses)
-    .listen(5500);
+
+server.listen(5000,function(){
+    console.log('server foi')
+})
