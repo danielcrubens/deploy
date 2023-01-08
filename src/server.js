@@ -20,6 +20,3 @@ server
     .get("/give-classes", pageGiveClasses)
     .post("/save-classes", saveClasses)
     .listen(5500);
-    const port = process.env.PORT || 5500;
-    app.listen(port)
-    console.log(`foi ${port}`)
