@@ -1,8 +1,8 @@
 {
   "name": "proffy",
   "scripts": {
-    "dev": "nodemon src/server.js",
-    "start": "node server.js"
+    "start": "nodemon src/server.js"
+
   },
   "dependencies": {
     "express": "^4.17.2",
