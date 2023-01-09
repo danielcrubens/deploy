@@ -1,38 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt_br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="theme-color" content="#2E6D6E">
-        <title>Proffy | Sua plataforma de estudos online</title>
-        <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=Poppins:wght@400;600&amp;display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body id="page-landing">
-        <div id="container">
-            <div class="logo-container ">
-                <img class="delaySmallReveal" src="/images/logo.svg" alt="Proffy">
-                <h2 class="delayMediumReveal">Sua plataforma de estudos online!</h2>
-            </div>
+{% extends "layout.html" %}
+
+{% set pageId = "page-home" %}
+
+<title>Ecoleta</title>
+{% block styles %}
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+{% block content %}
+  <div class="content">
+    <header>
+      <img src="/assets/logo.svg" alt="Logomarca">
+
+      <a href="create-point">
+        <span></span>Cadastre um ponto de coleta</a>
         
-                <img class="hero-image delayMediumReveal" src="/images/landing.svg" alt="Plataforma de Estudos">
-          
-            <div class="buttons-container delayLargeReveal">
-                <a class="study" href="/study">
-                    <img src="/images/icons/study.svg" alt="Estudar">Estudar
-                </a>
-                <a class="give-classes" href="/give-classes">
-                    <img src="/images/icons/give-classes.svg" alt="Dar Aulas">Dar aulas
-                </a>
-            </div>
-            <p class="total-connections delayLargeRevealRight">Total de 200 conexões já realizadas <img src="/images/icons/purple-heart.svg" alt="Coração">
-            </p>
-        </div>
-    </body>
-    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
-    <script src="scripts/main.js"></script>
-</html>
+    </header>
+    <main>
+      <h1>Seu marketplace de coleta de resíduos</h1>
+      <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
+      <a href="#">
+        <span></span>
+        <strong>Pesquisar pontos de coleta</strong>
+      </a>
+    </main>
+  </div>
+{% endblock content %}
+
+{% block modal %}
+  {%include "partials/modal.html"%}
+{% endblock modal %}
+{% block scripts %}
+  <script src="/scripts/index.js"></script>
+{% endblock scripts %}
