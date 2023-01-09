@@ -1,47 +1,81 @@
 <div align="center">
 
-# ![Proffy](public/images/favicon.png)
+# ![Foodfy](public/assets/logo.png)
 
 </div>
 
 ## 💻 Sobre o projeto
 
- O Proffy é uma plataforma de estudo onde podemos aproximar pessoas que queiram aprender com pessoas que queiram ensinar.
+Foodfy é uma aplicação voltada ao gerenciamento de receitas.
+
 ## :rocket:  Tecnologias utilizadas
 Esse projeto foi desenvolvido com as seguintes tecnologias:
-- [Html5](https://html.spec.whatwg.org/)
+- [HTML5](https://html.spec.whatwg.org/)
 - [SASS](https://sass-lang.com/)
-- [JavaScript](https://www.w3.org/standards/webdesign/script)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [NodeJS](https://nodejs.org/en/)
+- [Nodemailer](https://nodemailer.com/about/)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
-- [SQLite](sqlite.org/index.html)
+- [Postgresql](https://www.postgresql.org/)
+- [Express](https://expressjs.com/)
+- [Express Session](https://github.com/expressjs/session)
+- [Multer](https://github.com/expressjs/multer)
+- [Faker](https://fakerjs.dev/)
+- [BcryptJS](https://github.com/dcodeIO/bcrypt.js)
 
 
-## :zap:  Melhorias extras
-- Responsivo
 
 ## :white_check_mark: Resultado
 
-<img  src="public/images/proffy.gif">
+<img  src="public/assets/foodfy.gif">
  
  
 ## 💾 Instalação
 
 Baixe esse repositório e com o seu o terminal, entre no diretório
 
+
+```
+cd foodfy
+```
+
 Instale todas as dependências do projeto
 
 ```
 npm install
 ```
-
-
-Dê start na apliação
+ Crie o banco de dados e as tabelas utilizando os comandos inclusos no arquivo:
 
 ```
-npm run dev
+foodfy.sql
 ```
-Feito isso, abra o seu navegador e acesse `http://localhost:5500/`
+Conexão com o banco de dados:
+```
+Abra e edite o arquivo "db.js" dentro da pasta "src/config"
+Com o seu user e password do Postgres. Exemplo:
+User: postgres
+Password: root
+```
+
+
+Popule o banco de dados usando o aquivo "seed.js":
+
+```
+node seed.js
+```
+
+Rode a aplicação
+
+```
+npm start
+```
+Acessando a área administrativa
+
+```
+Selecione um email da tabela "users", acesse a tela de login e entre utilizando o mesmo com a senha "foodfy".
+```
+
+Feito isso, abra o seu navegador e acesse `http://localhost:3000/`
 
 
 
