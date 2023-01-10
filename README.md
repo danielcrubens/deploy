@@ -1,77 +1,47 @@
 <div align="center">
 
-# ![Launchstore](public/img/icon.ico)
+# ![Proffy](public/images/favicon.png)
 
 </div>
 
 ## 💻 Sobre o projeto
 
-Launchstore é um e-commerce para compra e venda de produtos ou serviços.
-
+ O Proffy é uma plataforma de estudo onde podemos aproximar pessoas que queiram aprender com pessoas que queiram ensinar.
 ## :rocket:  Tecnologias utilizadas
 Esse projeto foi desenvolvido com as seguintes tecnologias:
-- [HTML5](https://html.spec.whatwg.org/)
+- [Html5](https://html.spec.whatwg.org/)
 - [SASS](https://sass-lang.com/)
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [JavaScript](https://www.w3.org/standards/webdesign/script)
 - [NodeJS](https://nodejs.org/en/)
-- [Nodemailer](https://nodemailer.com/about/)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
-- [Postgresql](https://www.postgresql.org/)
-- [Express](https://expressjs.com/)
-- [Express Session](https://github.com/expressjs/session)
-- [Lottie](https://airbnb.design/lottie/)
-- [Multer](https://github.com/expressjs/multer)
-- [Faker](https://fakerjs.dev/)
-- [BcryptJS](https://github.com/dcodeIO/bcrypt.js)
+- [SQLite](sqlite.org/index.html)
 
 
+## :zap:  Melhorias extras
+- Responsivo
 
 ## :white_check_mark: Resultado
 
-<img  src="public/img/launchstore.gif">
+<img  src="public/images/proffy.gif">
  
  
 ## 💾 Instalação
 
 Baixe esse repositório e com o seu o terminal, entre no diretório
 
-
-```
-cd launchstore
-```
-
 Instale todas as dependências do projeto
 
 ```
 npm install
 ```
- Crie o banco de dados e as tabelas utilizando os comandos inclusos no arquivo:
-
-```
-database.sql
-```
-Conexão com o banco de dados:
-```
-Abra e edite o arquivo "db.js" dentro da pasta "src/config"
-Com o seu user e password do Postgres. Exemplo:
-User: postgres
-Password: root
-```
 
 
-Popule o banco de dados usando o aquivo "seed.js":
+Dê start na apliação
 
 ```
-node seed.js
+npm run dev
 ```
-
-Rode a aplicação
-
-```
-npm start
-```
-
-Feito isso, abra o seu navegador e acesse `http://localhost:3000/`
+Feito isso, abra o seu navegador e acesse `http://localhost:5500/`
 
 
 
